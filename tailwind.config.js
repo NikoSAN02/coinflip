@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        flip: {
+          '0%, 100%': { transform: 'rotateY(0)' },
+          '50%': { transform: 'rotateY(180deg)' },
+        },
+      },
+      animation: {
+        flip: 'flip 1s ease-in-out',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
