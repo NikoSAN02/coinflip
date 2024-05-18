@@ -32,25 +32,31 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Coin Flip</h1>
-      <button onClick={flipCoin} className={styles.button}>Flip Coin</button>
-      <div className={`${styles.coinContainer} ${animating ? styles.animate : ''}`}>
+    <div className="flex flex-row items-center justify-center h-screen w-screen">
+      <h1 className="text-4xl font-bold mb-8">Coin Flip</h1>
+      <div className='flex flex-col gap-10'>
+      <div className={`mt-8 ${animating ? 'animate-flip' : ''}`}>
         {result && (
           <Image
             src={`/${result.toLowerCase()}.png`}
             alt={result}
-            className={styles.coin}
             width={100}
             height={100}
           />
         )}
       </div>
-      <div className={styles.history}>
-        <h2>History</h2>
-        <ul>
+      <button
+        onClick={flipCoin}
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
+      >
+        Flip Coin
+      </button>
+      </div>
+      <div className="mt-8 w-full max-w-md">
+        <h2 className="text-2xl font-semibold mb-4">History</h2>
+        <ul className="">
           {history.map((res, index) => (
-            <li key={index}>{res}</li>
+            <li key={index} className="text-lg">{res}</li>
           ))}
         </ul>
       </div>

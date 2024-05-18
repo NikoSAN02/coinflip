@@ -4,7 +4,7 @@ import Home from "@/Components/Main"
 function page() {
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
       <Home/>
     </>
 
