@@ -53,7 +53,7 @@ export default function Home() {
       </button>
       </div>
       <div className="mt-8 w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-4">History</h2>
+        <h2 className="text-2xl font-semibold mb-2">History</h2>
         <ul className="">
           {history.map((res, index) => (
             <li key={index} className="text-lg">{res}</li>
