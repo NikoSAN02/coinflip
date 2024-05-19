@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -29,5 +30,72 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.flip {
+  animation: flip-animation 2s forwards; /* Adjust the duration for desired effect /
+}
+
+.flip-back {
+  animation: flip-back-animation 2s forwards; / Adjust the duration for desired effect */
+}
+
+@keyframes flip-animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+  125% {
+    transform: rotateY(450deg);
+  }
+  150% {
+    transform: rotateY(540deg);
+  }
+  175% {
+    transform: rotateY(630deg);
+  }
+  200% {
+    transform: rotateY(720deg);
+  }
+}
+
+@keyframes flip-back-animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+  125% {
+    transform: rotateY(450deg);
+  }
+  150% {
+    transform: rotateY(540deg);
+  }
+  175% {
+    transform: rotateY(630deg);
+  }
+  200% {
+    transform: rotateY(720deg);
   }
 }
