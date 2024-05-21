@@ -9,12 +9,13 @@ module.exports = {
     extend: {
       keyframes: {
         flip: {
-          '0%, 100%': { transform: 'rotateY(0)' },
-          '50%': { transform: 'rotateY(180deg)' },
+          '0%': { transform: 'rotateY(0)' },
+          '70%': { transform: 'rotateY(900deg)' }, // 2.5 full rotations
+          '100%': { transform: 'rotateY(1800deg)' }, // 5 full rotations
         },
       },
       animation: {
-        flip: 'flip 1s ease-in-out',
+        flip: 'flip 2s ease-in-out', // Spin for 2 seconds
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
