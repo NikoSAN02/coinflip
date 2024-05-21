@@ -1,6 +1,6 @@
 "use client";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 import { AuthType } from '@particle-network/auth-core';
 import { AuthCoreContextProvider, PromptSettingType } from '@particle-network/auth-core-modal';
